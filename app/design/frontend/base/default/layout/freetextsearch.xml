@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+		<reference name="head">
+			<action method="addCss" ifconfig="freetextsearch/general/enable"><stylesheet>css/magebuzz/freetextsearch.css</stylesheet></action>
+			<action method="addJs" ifconfig="freetextsearch/general/enable_quick_search"><script>magebuzz/quicksearch.js</script></action>
+			<action method="addCss" ifconfig="freetextsearch/general/enable_quick_search"><stylesheet>css/magebuzz/quicksearch.css</stylesheet></action>
+		</reference>
+		<reference name="top.search">
+            <action method="setTemplate" ifconfig="freetextsearch/general/enable">
+                <template>freetextsearch/form.phtml</template>
+            </action>
+        </reference>
+    </default>
+    <freetextsearch_index_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+		</reference>
+        <reference name="content">
+            <block type="freetextsearch/freetextsearch" name="freetextsearch" template="freetextsearch/form.phtml" />
+        </reference>
+    </freetextsearch_index_index>
+	<freetextsearch_search_result>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+		</reference>
+        <reference name="content">
+          <block type="freetextsearch/result" name="freetextsearch.result" template="freetextsearch/result.phtml">
+    				<block type="catalog/product_list" name="freetextsearch.product" template="catalog/product/list.phtml">
+    					<block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
+    						<block type="page/html_pager" name="product_list_toolbar_pager"/>
+    					</block>
+    				</block>
+    				<action method="setListCollection"/>
+    			</block>	
+        </reference>
+    </freetextsearch_search_result>
+</layout> 

@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <magebuzz translate="label">
+            <label>Magebuzz Add-ons</label>
+            <sort_order>71</sort_order>
+        </magebuzz>
+    </tabs>
+	<sections>
+        <freetextsearch translate="label" module="freetextsearch">
+            <label>Free Text Search</label>
+            <tab>magebuzz</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>299</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label">
+          <label>General Setting</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>1</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+						<enable translate="label comment">
+              <label>Enable Free Text Search</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+						</enable>
+						<enable_quick_search translate="label comment">
+              <label>Enable Quick Search</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <comment>The result will be shown in the drop down</comment>
+						</enable_quick_search>
+					</fields>
+				</general>
+				<search_setting translate="label">
+          <label>Search Setting</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>3</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+						<search_by_sku translate="label comment">
+              <label>Search product by SKU</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <comment>Allow search product by SKU</comment>
+						</search_by_sku>
+						<search_by_manufacturer translate="label comment">
+              <label>Search product by manufacturer</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <comment>Allow search product by manufacturer</comment>
+						</search_by_manufacturer>
+						<search_by_desc translate="label comment">
+              <label>Search product by product description</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <comment>Allow search product by product description</comment>
+						</search_by_desc>
+						<cms_pages_allow translate="label comment">
+              <label>Allow to search for CMS Pages</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <comment>Results will show products and CMS Pages</comment>
+						</cms_pages_allow>
+						<cms_pages_content translate="label comment">
+              <label>Show CMS page content</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>5</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <comment>Show CMS page content on search result page</comment>
+						</cms_pages_content>
+						<search_result_notice translate="label">
+              <label>The notice of search result</label>
+              <frontend_type>textarea</frontend_type>                            
+              <sort_order>6</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <comment>{{keyword}} will be replaced by the keyword which is searched by customer</comment>
+            </search_result_notice>
+					</fields>
+				</search_setting>
+				<quick_search_setting translate="label">
+          <label>Quick Search Setting</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>5</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+						<number_character translate="label comment">
+							<label>Limit of characters to start search</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+							<comment>After this number of character, search result will be shown.</comment>
+						</number_character>
+						<number_results translate="label comment">
+							<label>Number of results</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+							<comment>Number of results to show in the drop down</comment>
+						</number_results>
+						<thumbnail_product_image_width translate="label">
+              <label>Width of thumbnail product</label>
+              <frontend_type>text</frontend_type>                            
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+							<comment>Width of thumbnail product will be shown in the drop down.</comment>
+            </thumbnail_product_image_width>
+						<limit_character_product_desc translate="label">
+              <label>Limit characters in product description</label>
+              <frontend_type>text</frontend_type>                            
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+             </limit_character_product_desc>
+					</fields>
+				</quick_search_setting>
+			</groups>
+		</freetextsearch>
+    </sections>
+</config>

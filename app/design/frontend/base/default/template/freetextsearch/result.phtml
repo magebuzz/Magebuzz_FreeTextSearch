@@ -1,0 +1,37 @@
+<?php if(Mage::registry("result")):?>
+	<?php $results = Mage::registry("result"); ?>
+	<?php $keyword = Mage::registry("keyword");?>
+	<div class="search-result">
+		<div class="page-title">
+			<h1><?php echo $this->__("Search results for '%s'",$keyword)?></h1>
+		</div>
+		<div class="page-content">
+			<?php 
+				$cmspages = $results['cms'];
+				$products = $results['product'];
+			?>
+			<?php if(count($cmspages) > 0):?>
+			<h3 class="result-title"><span><?php echo $this->__('CMS Pages')?></span></h3>
+			<ul class="list-result-cms">
+			<?php foreach($cmspages as $_page):?>
+				<?php $pageInfo = Mage::getModel('cms/page')->load($_page,'page_id')->getData();?>
+				<li class="cms">
+					<h5 class="p-title">
+						<a target="_blank" title="<?php echo $pageInfo['title']?>" alt="<?php echo $pageInfo['title']?>" href="<?php echo $this->getUrl()?><?php echo $pageInfo['identifier']?>">
+							<?php echo $pageInfo['title']?>
+						</a>
+					</h5>
+					<?php if(Mage::helper('freetextsearch')->isShowPageContent()):?>
+					<div class="p-content">
+						<p><?php echo $pageInfo['content']?></p>
+					</div>
+					<?php endif; ?>	
+				</li>
+			<?php endforeach;?>
+			</ul>
+			<?php endif;?>
+			<h3 class="result-title"><span><?php echo $this->__('Products')?></span></h3>
+			<?php echo $this->getProductHtml()?>
+		</div>
+	</div>
+<?php endif; ?>

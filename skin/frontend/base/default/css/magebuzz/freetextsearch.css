@@ -1,0 +1,42 @@
+/* CSS for Search Result Page */
+.search-result{}
+.search-result .page-title{
+	margin:0 0 10px;
+}
+.search-result .page-content{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 0 0 0 #F0F0F0 inset, 0 0 5px #E8E6E6;
+	padding:10px;
+	overflow:hidden;
+}
+.search-result .result-title{
+	background: none repeat scroll 0 0 #CCCCCC;
+    float: left;
+    padding: 2px 0;
+    text-align: left;
+    width: 100%;
+	color: #444444;
+	 margin:0 0 15px;
+}
+.search-result .result-title span{padding-left:15px;}
+.search-result .list-result-cms{float:left; width:100%; margin:0 0 15px;}
+.search-result .list-result-cms{float:left; width:100%; margin:0 0 15px;}
+.search-result .list-result-cms li{
+	border-bottom: 1px dashed #CCCCCC;
+    padding: 5px 0;
+}
+.search-result .list-result-cms li h5.p-title{
+	color:#333333; 
+	font-size:13px; 
+	font-weight:bold;
+	margin:0;
+	background:url(images/list-icon.png) left center no-repeat;
+	padding-left:10px;
+}
+.search-result .list-result-cms li h5.p-title a{
+	color:#333333; 
+	font-size:13px; 
+	font-weight:bold;
+	text-decoration: none;
+}

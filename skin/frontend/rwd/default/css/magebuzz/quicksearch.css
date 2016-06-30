@@ -1,0 +1,95 @@
+/********Css For freetextsearch************/
+/* CSS for Quick Search */ 
+#showResults{
+	position:absolute;
+	right:33px;
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 0 0 0 #F0F0F0 inset, 0 0 5px #E8E6E6;
+	padding:15px;
+	width:300px;
+	top:30px;
+	z-index:999;
+	text-align:left;
+}
+#freetextsearch_form .form-search input.input-text{}
+#freetextsearch_form .form-search input.loading-result{background:#FFFFFF url(images/search-loading.gif) 95% center no-repeat;}
+#freetextsearch_form .form-search input.search-complete{background:#FFFFFF url(images/search_complete.png) 95% center no-repeat;}
+#showResults #resultNotice{
+	float: left;
+    margin: 5px 0;
+    width: 100%;
+}
+#showResults .close-dropdown{background:url(images/close-icon.png) top left no-repeat; float:right; width:16px; height:16px; text-indent:-999em;}
+#showResults #resultNotice span.keyword{
+	background:#f6ff00; 
+	font-weight:bold; 
+	color:#555555; 
+	padding:2px;
+}
+#showResults #resultLabel{
+	font-style:italic;
+	font-size:12px;
+	color:#ababab;
+}
+#showResults #listResults{
+	
+}
+#listResults .result-title{
+	background: none repeat scroll 0 0 #CCCCCC;
+    float: left;
+    padding: 2px 0;
+    text-align: center;
+    width: 100%;
+	color: #444444;
+}
+#listResults .list-products{
+	float:left; 
+	width:100%;
+	margin: 0 0 5px;
+}
+#listResults .list-products li.item{
+	border-bottom: 1px dashed #CCCCCC;
+    float: left;
+    padding: 10px 0;
+    width: 100%;
+}
+#listResults .list-products .product-img{float:left; border:1px solid #E1E1E1;}
+#listResults .list-products .product-info{
+	float: left;
+    margin-left: 10px;
+    text-align: justify;
+    width: 210px;
+}
+#listResults .list-products .product-name{}
+#listResults .list-products p.desc{color:#717171; margin:0 0 3px;}
+#listResults .list-products .product-price h5{color:#FF0000; font-size:15px; font-weight:bold;}
+#listResults .list-products .product-name a{
+	color: #333333;
+    font-weight: bold;
+	font-size:12px;
+    text-decoration: none;
+}
+#listResults .list-cms{
+	float:left; 
+	width:100%;
+	margin: 0 0 5px;
+	padding:0 0 5px;
+}
+#listResults .list-cms li{
+	border-bottom: 1px dashed #CCCCCC;
+    padding: 3px 0 3px 10px;
+	background:url(images/list-icon.png) left center no-repeat;
+}
+#listResults .list-cms li h5.p-title{
+	color:#333333; 
+	font-size:12px; 
+	font-weight:bold;
+	margin:0;
+}
+#listResults .list-cms li h5.p-title a{
+	color:#333333; 
+	font-size:12px; 
+	font-weight:bold;
+	text-decoration: none;
+}

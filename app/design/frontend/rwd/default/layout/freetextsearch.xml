@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+		<reference name="head">
+			<action method="addCss" ifconfig="freetextsearch/general/enable"><stylesheet>css/magebuzz/freetextsearch.css</stylesheet></action>
+			<action method="addJs" ifconfig="freetextsearch/general/enable_quick_search"><script>magebuzz/quicksearch.js</script></action>
+			<action method="addCss" ifconfig="freetextsearch/general/enable_quick_search"><stylesheet>css/magebuzz/quicksearch.css</stylesheet></action>
+		</reference>
+		<reference name="top.search">
+            <action method="setTemplate" ifconfig="freetextsearch/general/enable">
+                <template>freetextsearch/form.phtml</template>
+            </action>
+        </reference>
+    </default>
+    <freetextsearch_index_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+		</reference>
+        <reference name="content">
+            <block type="freetextsearch/freetextsearch" name="freetextsearch" template="freetextsearch/form.phtml" />
+        </reference>
+    </freetextsearch_index_index>
+	<freetextsearch_search_result>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+		</reference>
+        <reference name="content">
+          <block type="freetextsearch/result" name="freetextsearch.result" template="freetextsearch/result.phtml">
+    				<block type="catalog/product_list" name="freetextsearch.product" template="catalog/product/list.phtml">
+							<block type="core/text_list" name="product_list.name.after" as="name.after"/>
+							<block type="core/text_list" name="product_list.after" as="after" />
+    					<block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
+    						<block type="page/html_pager" name="product_list_toolbar_pager"/>								
+    					</block>
+							<action method="addColumnCountLayoutDepend"><layout>empty</layout><count>6</count></action>
+							<action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>5</count></action>
+							<action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>
+							<action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>
+							<action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+							<action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+							<!-- Since the addColumnCountLayoutDepend does not work, we are manually setting the max columns -->
+							<action method="setColumnCount"><count>4</count></action>
+    				</block>
+    				<action method="setListCollection"/>
+    			</block>	
+        </reference>
+    </freetextsearch_search_result>
+</layout> 
